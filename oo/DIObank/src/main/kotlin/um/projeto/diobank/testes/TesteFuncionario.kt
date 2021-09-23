@@ -1,13 +1,16 @@
 package um.projeto.diobank.testes
 
+import um.projeto.diobank.Analista
 import um.projeto.diobank.Funcionario
-import java.math.BigDecimal
+import um.projeto.diobank.Gerente
 
 fun main(){
-    val jose = Funcionario("José Exemplo","78945612300", BigDecimal.valueOf(2000.0))
+    val jose = Analista("José Exemplo","78945612300",1800.0)
 
-    println(jose.nome)
-    println(jose.cpf)
-    println(jose.salario)
+    printRelatorio.imprime(jose)
+
+    val kelly = Gerente("Kerok","12345678911",5000.0)
+    printRelatorio.imprime(kelly)
 
 }
+
